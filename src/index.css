@@ -1,0 +1,123 @@
+:root {
+  /* Colors - Refined Palette */
+  --bg-dark: #000000;
+  /* True Black for depth */
+  --bg-s: #050510;
+  --primary: #8E54E9;
+  /* Softer, richer purple */
+  --primary-hover: #7b42d6;
+  --text-main: #F5F5F7;
+  /* Apple's specific off-white */
+  --text-muted: #86868b;
+  /* Apple's grey */
+  --accent-blue: #2997ff;
+  /* Apple Blue */
+
+  /* Gradients */
+  --gradient-text: linear-gradient(135deg, #F5F5F7 0%, #a1a1a6 100%);
+  --gradient-glow: radial-gradient(circle at center, rgba(142, 84, 233, 0.15) 0%, transparent 70%);
+
+  /* Spacing & Layout */
+  --container-width: 980px;
+  /* Tighter focus */
+  --header-height: 60px;
+  /* Sleeker */
+  --radius-xl: 30px;
+  --radius-l: 20px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Outfit", sans-serif;
+  color: var(--text-main);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s ease;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+/* Utilities */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 8rem 0;
+  position: relative;
+  z-index: 10;
+}
+
+.text-gradient {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.btn-primary {
+  background: var(--text-main);
+  color: #000;
+  padding: 12px 24px;
+  border-radius: 999px;
+  /* Pill shape */
+  font-weight: 500;
+  font-size: 1rem;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+.btn-outline {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-main);
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.glass-card {
+  background: rgba(22, 22, 30, 0.6);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-l);
+}
